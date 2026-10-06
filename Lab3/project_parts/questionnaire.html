@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завдання 4 - Анкета користувача</title>
+  <style type="text/css">
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7f6;
+      padding: 20px;
+    }
+    .form-container {
+      width: 650px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 25px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    fieldset {
+      border: 2px solid #074481;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+    legend {
+      font-weight: bold;
+      color: #074481;
+      padding: 0 8px;
+    }
+    .form-group {
+      margin-bottom: 12px;
+      display: flex;
+      flex-direction: column;
+    }
+    .form-group-inline {
+      margin-bottom: 12px;
+    }
+    label {
+      margin-bottom: 5px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    textarea,
+    select {
+      padding: 8px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      font-size: 14px;
+      width: 95%;
+    }
+    .buttons-group {
+      text-align: center;
+      margin-top: 15px;
+    }
+    input[type="submit"], input[type="reset"] {
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2 style="text-align: center;">Анкета реєстрації та опитування</h2>
+
+    <!-- <form action="" method="get"> — створення форми та демонстрація параметрів у рядку URL -->
+    <form action="" method="get">
+
+      <!-- <fieldset> та <legend> — тематичне групування полів форми у рамки з підписами -->
+      <fieldset>
+        <legend>1. Облікові та контактні дані</legend>
+
+        <!-- <label for="id"> + <input id="id"> — прив'язка текстових міток безпосередньо до полів вводу -->
+        <!-- required, placeholder, autocomplete="off", tabindex="N" — обов'язковість заповнення, текст-підказка, вимкнення автозаповнення та порядок переходу клавішею Tab -->
+        <!-- type="text", type="password", type="email", type="tel", type="date", <textarea> — різні типи полів для збору інформації -->
+        <div class="form-group">
+          <label for="username">Ім'я користувача:</label>
+          <input type="text" id="username" name="username" placeholder="Введіть ваше ім'я" required tabindex="1">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Пароль (рівно 6 знаків: цифра, мала і велика літера):</label>
+          <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6}" — регулярний вираз для валідації пароля (рівно 6 символів: мала, велика літера та цифра) -->
+          <input type="password" id="password" name="user_password" placeholder="Aa1234"
+                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6}"
+                 title="Пароль повинен складатися з 6 символів, містити хоча б одну велику літеру, малу літеру та цифру"
+                 required tabindex="2">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Електронна пошта:</label>
+          <input type="email" id="email" name="user_email" placeholder="example@mail.com"
+                 autocomplete="off"
+                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                 required tabindex="3">
+        </div>
+
+        <div class="form-group">
+          <label for="tel">Номер телефону (формат: +380XXXXXXXXX):</label>
+          <input type="tel" id="tel" name="user_tel" placeholder="+380991234567"
+                 pattern="^\+?380\d{9}$"
+                 required tabindex="4">
+        </div>
+
+        <div class="form-group">
+          <label for="birthdate">Дата народження:</label>
+          <input type="date" id="birthdate" name="birthdate" tabindex="5">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. Переваги та статус</legend>
+
+        <!-- type="radio" (зі спільним name) та type="checkbox" — залежні перемикачі та незалежні прапорці -->
+        <p><strong>Рівень освіти:</strong></p>
+        <div class="form-group-inline">
+          <label><input type="radio" name="education" value="bachelor" tabindex="6"> Бакалавр</label>
+          <label><input type="radio" name="education" value="master" tabindex="7"> Магістр</label>
+          <label><input type="radio" name="education" value="phd" tabindex="8"> Аспірант</label>
+        </div>
+
+        <p><strong>Форма навчання:</strong></p>
+        <div class="form-group-inline">
+          <label><input type="radio" name="study_form" value="fulltime" tabindex="9"> Денна</label>
+          <label><input type="radio" name="study_form" value="distance" checked tabindex="10"> Дистанційна</label>
+          <label><input type="radio" name="study_form" value="evening" tabindex="11"> Вечірня</label>
+        </div>
+
+        <p><strong>Інтереси:</strong></p>
+        <div class="form-group-inline">
+          <label><input type="checkbox" name="interest" value="frontend" tabindex="12"> Web Frontend</label>
+          <label><input type="checkbox" name="interest" value="backend" tabindex="13"> Backend розробка</label>
+          <label><input type="checkbox" name="interest" value="design" tabindex="14"> UI/UX Дизайн</label>
+          <label><input type="checkbox" name="interest" value="qa" tabindex="15"> Тестування (QA)</label>
+        </div>
+      </fieldset>
+
+      <!-- <select>, <select multiple>, <optgroup label="...">, <datalist> — випадаючі списки (простий, множинний, із категоріями та з підказками) -->
+      <fieldset>
+        <legend>3. Вибір параметрів та технологій</legend>
+
+        <div class="form-group">
+          <label for="country">Країна:</label>
+          <select id="country" name="country" tabindex="16">
+            <option value="poland">Польща</option>
+            <option value="germany">Німеччина</option>
+            <option value="ukraine" selected>Україна</option>
+            <option value="usa">США</option>
+            <option value="canada">Канада</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="languages">Мови програмування:</label>
+          <select id="languages" name="languages" multiple size="4" tabindex="17">
+            <option value="csharp">C#</option>
+            <option value="cpp">C++</option>
+            <option value="python">Python</option>
+            <option value="javascript">JavaScript</option>
+            <option value="java">Java</option>
+            <option value="php">PHP</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="course_module">Навчальні дисципліни:</label>
+          <select id="course_module" name="course_module" tabindex="18">
+            <optgroup label="Математичний блок">
+              <option value="calc">Вища математика</option>
+              <option value="discrete">Дискретна математика</option>
+              <option value="stats">Теорія ймовірностей</option>
+            </optgroup>
+            <optgroup label="Програмування">
+              <option value="prog_base">Основи програмування</option>
+              <option value="oop">Об'єктно-орієнтоване програмування</option>
+              <option value="algo">Алгоритми та структури</option>
+            </optgroup>
+            <optgroup label="Веб-технології">
+              <option value="html_css">HTML5 & CSS3</option>
+              <option value="js_dom">JavaScript та DOM</option>
+              <option value="frameworks">Сучасні веб-фреймворки</option>
+            </optgroup>
+            <optgroup label="Системна інженерія">
+              <option value="os">Операційні системи</option>
+              <option value="networks">Комп'ютерні мережі</option>
+              <option value="db">Бази даних</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="city_choice">Місто:</label>
+          <input list="cities" id="city_choice" name="city_choice" placeholder="Почніть вводити назву міста..." tabindex="19">
+          <datalist id="cities">
+            <option value="Київ">
+            <option value="Чернівці">
+            <option value="Львів">
+            <option value="Харків">
+            <option value="Одеса">
+            <option value="Дніпро">
+          </datalist>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>4. Додаткові матеріали та відправка</legend>
+
+        <!-- <input type="file" accept="audio/*" multiple> — завантаження кількох аудіофайлів -->
+        <div class="form-group">
+          <label for="audio_files">Завантажити аудіофайли:</label>
+          <input type="file" id="audio_files" name="audio_files" accept="audio/*" multiple tabindex="20">
+        </div>
+
+        <div class="form-group">
+          <label for="feedback">Коментар або відгук:</label>
+          <textarea id="feedback" name="feedback" rows="4" placeholder="Ваші побажання чи зауваження..." tabindex="21"></textarea>
+        </div>
+
+        <!-- <input type="submit"> та <input type="reset"> — кнопки надсилання даних та повного очищення форми -->
+        <div class="buttons-group">
+          <input type="submit" value="Надіслати анкету" tabindex="22">
+          <input type="reset" value="Очистити форму" tabindex="23">
+        </div>
+      </fieldset>
+
+    </form>
+
+    <br>
+    <a href="../index.html">Повернутись на головну</a>
+  </div>
+
+</body>
+</html>

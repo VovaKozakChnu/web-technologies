@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завдання 1 - Таблиця</title>
+  <style type="text/css">
+    /* border-collapse: collapse; — злиття подвійних меж таблиці в одну лінію */
+    table {
+      border-collapse: collapse;
+      width: 420px;
+      height: 420px;
+      margin: 20px auto;
+      table-layout: fixed;
+    }
+    td {
+      border: 2px solid #000;
+      padding: 0;
+    }
+    .center-block {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="center-block">
+    <h2>Завдання 1: Таблиця зі зразка</h2>
+
+    <!-- <table>, <tr>, <td> — створення сітки таблиці -->
+    <table>
+      <tr style="height: 45px;">
+        <!-- colspan="N" — об'єднання комірок по горизонталі на N стовпців вправо -->
+        <!-- bgcolor="#hex" — заливка фону окремої комірки кольором -->
+        <td colspan="6" bgcolor="#15dfb3"><br/></td>
+      </tr>
+
+      <tr style="height: 45px;">
+        <!-- rowspan="N" — об'єднання комірок по вертикалі на N рядків вниз -->
+        <td rowspan="6" bgcolor="#fffdd0" style="width: 55px;"><br/></td>
+        <td colspan="4" bgcolor="#15dfb3"><br/></td>
+        <td rowspan="6" bgcolor="#fffdd0" style="width: 55px;"><br/></td>
+      </tr>
+
+      <tr style="height: 45px;">
+        <td rowspan="4" bgcolor="#ffffe0" style="width: 55px;"><br/></td>
+        <td colspan="2" bgcolor="#15dfb3"><br/></td>
+        <td rowspan="4" bgcolor="#ffffe0" style="width: 55px;"><br/></td>
+      </tr>
+
+      <tr style="height: 60px;">
+        <td bgcolor="#ff0000" style="width: 60px;"><br/></td>
+        <td bgcolor="#0000ff" style="width: 60px;"><br/></td>
+      </tr>
+
+      <tr style="height: 60px;">
+        <td bgcolor="#00ff00"><br/></td>
+        <td bgcolor="#ffff00"><br/></td>
+      </tr>
+
+      <tr style="height: 45px;">
+        <td colspan="2" bgcolor="#15dfb3"><br/></td>
+      </tr>
+
+      <tr style="height: 45px;">
+        <td colspan="4" bgcolor="#15dfb3"><br/></td>
+      </tr>
+
+      <tr style="height: 45px;">
+        <td colspan="6" bgcolor="#15dfb3"><br/></td>
+      </tr>
+    </table>
+
+  </div>
+</body>
+</html>

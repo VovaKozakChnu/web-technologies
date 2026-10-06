@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завдання 3 - Розклад занять</title>
+  <style type="text/css">
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .main-wrapper {
+      width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .days-list {
+      display: inline-block;
+      text-align: left;
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+    .days-list a {
+      color: #074481;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .days-list a:hover {
+      text-decoration: underline;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #074481;
+      color: #ffffff;
+    }
+    .day-section {
+      margin-bottom: 15px;
+      padding-top: 10px;
+    }
+    .image-box {
+      margin: 20px auto 40px auto;
+      display: flex;
+      justify-content: center;
+    }
+    .image-box img {
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Дні тижня:</h1>
+
+  <div class="main-wrapper">
+
+    <!-- <ul> та <li> — маркований список днів тижня -->
+    <!-- <a href="#day_id"> — якірні посилання для швидкого переходу в межах однієї сторінки -->
+    <ul class="days-list">
+      <li><a href="#monday">Понеділок</a></li>
+      <li><a href="#tuesday">Вівторок</a></li>
+      <li><a href="#wednesday">Середа</a></li>
+      <li><a href="#thursday">Четвер</a></li>
+      <li><a href="#friday">П'ятниця</a></li>
+      <li><a href="#saturday">Субота</a></li>
+      <li><a href="#sunday">Неділя</a></li>
+    </ul>
+
+    <!-- <div id="day_id"> — ідентифікатор блоку, до якого здійснюється перехід -->
+    <div id="monday" class="day-section">
+      <h2>Понеділок</h2>
+      <table>
+        <!-- <caption> — підпис або заголовок до кожної таблиці розкладу -->
+        <caption>Розклад понеділка (за двома тижнями)</caption>
+        <tr>
+          <!-- <th> — спеціальні заголовні клітинки для номерів пар і днів тижня -->
+          <th>Пара</th>
+          <th>Час</th>
+          <th>1-й тиждень</th>
+          <th>2-й тиждень</th>
+        </tr>
+        <tr bgcolor="#eef9ff">
+          <td>1</td>
+          <td>08:30 - 09:50</td>
+          <td>Вища математика (лек.)</td>
+          <td>Вища математика (практ.)</td>
+        </tr>
+        <tr bgcolor="#ffffff">
+          <td>2</td>
+          <td>10:10 - 11:30</td>
+          <td>Веб-технології (лек.)</td>
+          <td>Веб-технології (лаб.)</td>
+        </tr>
+        <tr bgcolor="#eef9ff">
+          <td>3</td>
+          <td>11:50 - 13:10</td>
+          <td>Основи програмування (лаб.)</td>
+          <td>—</td>
+        </tr>
+      </table>
+    </div>
+    <!-- <div> + <img src="../img/dayX.jpg"> — центровані блоки із зображеннями розміром 400х400 пікселів після кожної таблиці -->
+    <div class="image-box">
+      <img src="../img/day1.jpg" alt="Ілюстрація до понеділка">
+    </div>
+
+    <div id="tuesday" class="day-section">
+      <h2>Вівторок</h2>
+      <table>
+        <caption>Розклад вівторка (за двома тижнями)</caption>
+        <tr>
+          <th>Пара</th>
+          <th>Час</th>
+          <th>1-й тиждень</th>
+          <th>2-й тиждень</th>
+        </tr>
+        <tr bgcolor="#fff8ee">
+          <td>1</td>
+          <td>08:30 - 09:50</td>
+          <td>Алгоритми та структури даних</td>
+          <td>Алгоритми та структури даних</td>
+        </tr>
+        <tr bgcolor="#ffffff">
+          <td>2</td>
+          <td>10:10 - 11:30</td>
+          <td>Іноземна мова</td>
+          <td>Іноземна мова</td>
+        </tr>
+        <tr bgcolor="#fff8ee">
+          <td>3</td>
+          <td>11:50 - 13:10</td>
+          <td>—</td>
+          <td>Фізичне виховання</td>
+        </tr>
+      </table>
+    </div>
+    <div class="image-box">
+      <img src="../img/day2.jpg" alt="Ілюстрація до вівторка">
+    </div>
+
+    <div id="wednesday" class="day-section">
+      <h2>Середа</h2>
+      <table>
+        <caption>Розклад середи (за двома тижнями)</caption>
+        <tr>
+          <th>Пара</th>
+          <th>Час</th>
+          <th>1-й тиждень</th>
+          <th>2-й тиждень</th>
+        </tr>
+        <tr bgcolor="#eef9ff">
+          <td>1</td>
+          <td>08:30 - 09:50</td>
+          <td>Архітектура комп'ютерів (лек.)</td>
+          <td>Архітектура комп'ютерів (лаб.)</td>
+        </tr>
+        <tr bgcolor="#ffffff">
+          <td>2</td>
+          <td>10:10 - 11:30</td>
+          <td>Бази даних (лек.)</td>
+          <td>Бази даних (практ.)</td>
+        </tr>
+      </table>
+    </div>
+    <div class="image-box">
+      <img src="../img/day3.jpg" alt="Ілюстрація до середи">
+    </div>
+
+    <div id="thursday" class="day-section">
+      <h2>Четвер</h2>
+      <table>
+        <caption>Розклад четверга (за двома тижнями)</caption>
+        <tr>
+          <th>Пара</th>
+          <th>Час</th>
+          <th>1-й тиждень</th>
+          <th>2-й тиждень</th>
+        </tr>
+        <tr bgcolor="#fff8ee">
+          <td>1</td>
+          <td>08:30 - 09:50</td>
+          <td>Веб-технології (практ.)</td>
+          <td>Веб-технології (практ.)</td>
+        </tr>
+        <tr bgcolor="#ffffff">
+          <td>2</td>
+          <td>10:10 - 11:30</td>
+          <td>Дискретна математика (лек.)</td>
+          <td>Дискретна математика (практ.)</td>
+        </tr>
+      </table>
+    </div>
+    <div class="image-box">
+      <img src="../img/day4.jpg" alt="Ілюстрація до четверга">
+    </div>
+
+    <div id="friday" class="day-section">
+      <h2>П'ятниця</h2>
+      <table>
+        <caption>Розклад п'ятниці (за двома тижнями)</caption>
+        <tr>
+          <th>Пара</th>
+          <th>Час</th>
+          <th>1-й тиждень</th>
+          <th>2-й тиждень</th>
+        </tr>
+        <tr bgcolor="#eef9ff">
+          <td>1</td>
+          <td>08:30 - 09:50</td>
+          <td>Комп'ютерні мережі (лек.)</td>
+          <td>Комп'ютерні мережі (лаб.)</td>
+        </tr>
+        <tr bgcolor="#ffffff">
+          <td>2</td>
+          <td>10:10 - 11:30</td>
+          <td>Операційні системи (практ.)</td>
+          <td>Операційні системи (лек.)</td>
+        </tr>
+      </table>
+    </div>
+    <div class="image-box">
+      <img src="../img/day5.jpg" alt="Ілюстрація до п'ятниці">
+    </div>
+
+    <div id="saturday" class="day-section">
+      <h2>Субота</h2>
+      <table>
+        <caption>Розклад вихідного дня студента</caption>
+        <tr>
+          <th>Час</th>
+          <th>Запланована діяльність</th>
+          <th>Примітки</th>
+        </tr>
+        <tr bgcolor="#f6ffed">
+          <td>10:00 - 12:00</td>
+          <td>Відпочинок, спорт / прогулянка</td>
+          <td>На свіжому повітрі</td>
+        </tr>
+        <tr bgcolor="#ffffff">
+          <td>13:00 - 16:00</td>
+          <td>Самостійна робота, виконання лаб</td>
+          <td>Підготовка завдань з веб-розробки</td>
+        </tr>
+        <tr bgcolor="#f6ffed">
+          <td>17:00 - 22:00</td>
+          <td>Зустріч з друзями, перегляд фільму</td>
+          <td>Вільний час</td>
+        </tr>
+      </table>
+    </div>
+    <div class="image-box">
+      <img src="../img/day6.jpg" alt="Ілюстрація до суботи">
+    </div>
+
+    <div id="sunday" class="day-section">
+      <h2>Неділя</h2>
+      <table>
+        <caption>Розклад вихідного дня студента</caption>
+        <tr>
+          <th>Час</th>
+          <th>Запланована діяльність</th>
+          <th>Примітки</th>
+        </tr>
+        <tr bgcolor="#f6ffed">
+          <td>10:30 - 12:30</td>
+          <td>Сніданок та хобі / читання</td>
+          <td>Особистий час</td>
+        </tr>
+        <tr bgcolor="#ffffff">
+          <td>14:00 - 18:00</td>
+          <td>Повторення матеріалу на наступний тиждень</td>
+          <td>Перевірка дедлайнів</td>
+        </tr>
+        <tr bgcolor="#f6ffed">
+          <td>19:00 - 23:00</td>
+          <td>Відпочинок, підготовка до понеділка</td>
+          <td>Сон за графіком</td>
+        </tr>
+      </table>
+    </div>
+    <div class="image-box">
+      <img src="../img/day7.jpg" alt="Ілюстрація до неділі">
+    </div>
+
+    <br>
+    <a href="../index.html">Повернутись на головну</a>
+  </div>
+
+</body>
+</html>

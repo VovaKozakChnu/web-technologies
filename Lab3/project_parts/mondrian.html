@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завдання 2 - Картина Мондріана</title>
+  <style type="text/css">
+    /* <table> + border: 5px solid #000000; — створення товстих чорних роздільних ліній картини */
+    /* table-layout: fixed; — фіксація розмірів сітки, щоб клітинки не деформувалися під час заповнення */
+    table {
+      border-collapse: collapse;
+      width: 420px;
+      height: 420px;
+      margin: 30px auto;
+      table-layout: fixed;
+    }
+    td {
+      border: 5px solid #000000;
+      padding: 0;
+    }
+    .center-block {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="center-block">
+    <h2>Завдання 2: Піт Мондріан — «Композиція з червоним, синім і жовтим»</h2>
+
+    <table>
+      <tr style="height: 60px;">
+        <!-- bgcolor із точними кодами кольорів: #fffa69, #074481, #ff5b2d, #000000, #ffffff -->
+        <td bgcolor="#ffffff" style="width: 45px;"><br/></td>
+        <!-- rowspan та colspan — побудова асиметричних кольорових блоків -->
+        <td rowspan="2" colspan="2" bgcolor="#ff5b2d"><br/></td>
+        <td colspan="2" rowspan="2" bgcolor="#fffa69" style="height: 140px;"><br/></td>
+      </tr>
+
+      <tr style="height: 120px;">
+        <td bgcolor="#ffffff"><br/></td>
+      </tr>
+
+      <tr style="height: 80px;">
+        <td rowspan="2" bgcolor="#000000"><br/></td>
+        <td colspan="2" bgcolor="#ffffff"><br/></td>
+        <td bgcolor="#ffffff" style="width: 60px;"><br/></td>
+        <td bgcolor="#ffffff" style="width: 65px;"><br/></td>
+      </tr>
+
+      <tr style="height: 80px;">
+        <td bgcolor="#ffffff"><br/></td>
+        <td bgcolor="#000000"><br/></td>
+        <td colspan="2" rowspan="2" bgcolor="#074481"><br/></td>
+      </tr>
+
+      <tr style="height: 80px;">
+        <td bgcolor="#fffa69"><br/></td>
+        <td colspan="2" bgcolor="#ffffff"><br/></td>
+      </tr>
+    </table>
+
+  </div>
+</body>
+</html>
