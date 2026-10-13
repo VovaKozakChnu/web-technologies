@@ -1,0 +1,69 @@
+/* Базовий шрифт із засічками, як на зразку */
+body {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Клас для загальної фіолетової рамки */
+.recipe-container {
+    border: 1px solid mediumpurple; /* Тонка фіолетова рамка */
+    padding: 30px; /* Внутрішні відступи від тексту до рамки */
+    margin: 20px; /* Зовнішні відступи від країв екрана */
+}
+
+/* Ідентифікатор для головного заголовка */
+#recipe-title {
+    color: red; /* Червоний колір тексту */
+    text-align: center; /* Вирівнювання по центру */
+    font-weight: bold; /* Жирний шрифт */
+    font-size: 32px;
+}
+
+/* Клас для підзаголовка "Продукти:" */
+.recipe-subtitle {
+    text-align: center; /* Вирівнювання по центру */
+    font-style: italic; /* Курсив */
+    font-weight: bold; /* Жирний шрифт */
+    font-size: 24px;
+}
+
+/* Клас для списку інгредієнтів */
+.ingredients-list {
+    list-style-type: none; /* Прибираємо стандартні крапки списку */
+    padding: 0; /* Прибираємо стандартний відступ списку зліва */
+    text-align: center; /* Вирівнюємо весь список по центру */
+    line-height: 1.6; /* Міжрядковий інтервал для кращої читабельності */
+    font-size: 18px;
+}
+
+/* Класи для точкового форматування тексту всередині списку */
+.bold-text {
+    font-weight: bold; /* Робить назви інгредієнтів жирними */
+}
+
+.underline-text {
+    text-decoration: underline; /* Підкреслює текст */
+}
+
+.strike-text {
+    text-decoration: line-through; /* Перекреслює старі значення (1 ст.л., 250) */
+}
+
+.highlight-text {
+    background-color: yellow; /* Задає жовтий фон для тексту */
+}
+
+/* Клас для роздільної лінії */
+.green-line {
+    border: none;
+    border-top: 4px solid green; /* Товста зелена лінія */
+    width: 80%; /* Ширина лінії (не на весь екран) */
+    margin: 20px auto; /* Відступи зверху/знизу та центрування по горизонталі */
+}
+
+/* Клас для фінального тексту внизу */
+.recipe-footer {
+    text-align: center; /* Вирівнювання по центру */
+    font-family: "Comic Sans MS", cursive, sans-serif; /* Імітація рукописного/декоративного шрифту */
+    font-style: italic; /* Курсив */
+    font-size: 20px;
+}

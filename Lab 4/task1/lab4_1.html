@@ -1,0 +1,45 @@
+<!DOCTYPE html> <!-- Оголошує тип документа як HTML5 для браузера -->
+<html lang="uk"> <!-- Кореневий тег сторінки, вказує мову вмісту (українська) -->
+<head> <!-- Контейнер для службової інформації (метаданих) сторінки -->
+    <meta charset="UTF-8"> <!-- Встановлює кодування UTF-8, щоб українські та інші символи відображались коректно -->
+    <title>Завдання 1</title> <!-- Задає назву сторінки, яка відображається на вкладці браузера -->
+
+    <!-- Підключення зовнішнього файлу стилів CSS (style.css) до нашого HTML-документа -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> <!-- Контейнер для всього видимого контенту, який користувач бачить на екрані -->
+
+    <!-- 1-й абзац (тег <p> - paragraph).
+         Атрибут class дозволяє застосувати одразу кілька стилів (через пробіл):
+         .red-text (червоний колір) та .no-wrap (заборона перенесення) -->
+    <p class="red-text no-wrap">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero accusamus eius excepturi eum similique veniam? Quos eius quis ratione rerum, ad quasi, ut perferendis suscipit nemo esse at commodi fugit eius? Minus minima sint laborum id earum ipsa, aspernatur fugit, quaerat, eaque corrupti?
+    </p>
+
+    <!-- 2-й абзац.
+         Атрибут id="special-text" є унікальним ідентифікатором (використовується лише раз на сторінці).
+         Також додано клас "shadow-effect" для тіні. -->
+    <p id="special-text" class="shadow-effect">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt assumenda ex velit aperiam voluptatibus! Vel cupiditate corporis veniam mollitia similique nam quasi aperiam velit veritatis aliquid harum et beatae sequi laboriosam maxime ad recusandae, nihil odit. Et odit sint enim magni nam velit justo vitae eius numquam corrupti.
+    </p>
+
+    <!-- 3-й абзац. Застосовуємо лише клас "red-text" для зміни кольору тексту -->
+    <p class="red-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum tenetur reprehenderit ipsam! A quae itaque iure laborum dicta, ipsam est adipisci velit sequi amet ad vel fugiat voluptatem ea voluptates id maiores quaerat perferendis. Minus mollitia, cumque, hic quidem veniam illum voluptatem obcaecati provident optio.
+    </p>
+
+    <!-- 1-й блоковий елемент (тег <div> - division). Це універсальний контейнер.
+         Клас "div-style-1" застосовує перекреслення, великі літери та відступ. -->
+    <div class="div-style-1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque praesentium in repellendus eveniet illum eius dolor sit amet consectetur adipisicing elit. Reiciendis, asperiores explicabo laudantium fugiat repellat repellendus quia numquam aspernatur reprehenderit error fugiat. Ea ipsa quibusdam repellat quaerat molestias unde dolor omnis veniam ad fugiat sed ipsum.
+    </div>
+
+    <!-- 2-й блоковий елемент.
+         Застосовуємо клас "shadow-effect" (щоб додати таку ж тінь, як у 2 абзаці)
+         та клас "div-style-2" (для інтервалів між словами і буквами). -->
+    <div class="shadow-effect div-style-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum necessitatibus suscipit nesciunt, incidunt officia, nulla recusandae esse inventore libero ullam veritatis nam illo ducimus ad, nobis in excepturi. Non culpa dicta illum rem voluptatibus optio magnam eaque reiciendis quidem assumenda animi consectetur at hic voluptates officia officiis repellendus.
+    </div>
+
+</body>
+</html>
