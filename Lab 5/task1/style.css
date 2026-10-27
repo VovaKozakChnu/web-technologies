@@ -1,0 +1,81 @@
+/* Скидання стандартних відступів списків */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Загальні властивості блоку div та заголовка */
+div {
+    background-color: rgb(255, 165, 0); /*[cite: 20] */
+    width: 500px; /*[cite: 20] */
+    padding: 20px; /*[cite: 20] */
+    color: white; /*[cite: 20] */
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 25px; /*[cite: 20] */
+    font-weight: 900; /*[cite: 20] */
+    margin-top: 0;
+    margin-bottom: 10px; /*[cite: 20] */
+}
+
+/* Маркерований список 1-го рівня */
+ul.level-1 {
+    background-color: rgb(103, 158, 128); /*[cite: 21] */
+    padding-right: 20px; /*[cite: 21] */
+    padding-left: 50px; /*[cite: 21] */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+ul.level-1 > li {
+    margin-bottom: 20px;
+}
+
+/* Спільні властивості для всіх span */
+span {
+    display: inline-block; /*[cite: 21] */
+    padding: 10px 20px; /*[cite: 21] */
+}
+
+/* Елемент span в списку 1-го рівня */
+span.title-span {
+    font-size: 20px; /*[cite: 21] */
+    font-weight: 700; /*[cite: 21] */
+    background-color: rgb(199, 124, 106); /*[cite: 21] */
+    margin-bottom: 10px; /*[cite: 21] */
+}
+
+/* Маркерований список 2-го рівня (ul) */
+ul.level-2 {
+    background-color: rgb(153, 180, 102); /*[cite: 21] */
+    font-size: 18px; /*[cite: 21] */
+    font-style: italic; /*[cite: 21] */
+    padding: 10px;
+}
+
+/* Елементи списку 2-го рівня (li) */
+ul.level-2 > li {
+    margin-bottom: 10px; /*[cite: 21] */
+    padding-left: 40px; /*[cite: 21] */
+    background-repeat: no-repeat; /*[cite: 20] */
+    background-position: left center; /*[cite: 20] */
+    background-size: 30px 30px; /*[cite: 20] */
+}
+
+/* Елемент span в списку 2-го рівня */
+ul.level-2 > li > span {
+    background-color: rgb(218, 106, 32); /*[cite: 21] */
+}
+
+/* Підключення іконок з подвійним розширенням .png.png */
+.icon-route { background-image: url('icons/route.png.png'); } /*[cite: 33] */
+.icon-tickets { background-image: url('icons/tickets.png.png'); } /*[cite: 33] */
+.icon-hotel { background-image: url('icons/hotel.png.png'); } /*[cite: 33] */
+.icon-car { background-image: url('icons/car.png.png'); } /*[cite: 33] */
+.icon-bar { background-image: url('icons/bar.png.png'); } /*[cite: 33] */
+.icon-casino { background-image: url('icons/casino.png.png'); } /*[cite: 33] */
+.icon-museum { background-image: url('icons/museum.png.png'); } /*[cite: 33] */
+.icon-fest { background-image: url('icons/fest.png.png'); } /*[cite: 33] */

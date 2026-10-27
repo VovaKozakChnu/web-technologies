@@ -1,0 +1,22 @@
+div { width: 300px; height: 200px; margin: 20px; padding: 15px; display: inline-block; color: white; font-weight: bold; vertical-align: top; box-sizing: border-box; } /*[cite: 24] */
+
+div:nth-of-type(1) {
+    background: linear-gradient(45deg, #2196f3 50%, #1976d2 50%); /*[cite: 24] */
+    background-size: 40px 40px; /*[cite: 24] */
+}
+div:nth-of-type(2) {
+    background: linear-gradient(transparent 50%, rgba(33, 150, 243, 0.5) 50%), linear-gradient(90deg, rgba(33, 150, 243, 0.5) 50%, transparent 50%); /*[cite: 15, 25] */
+    background-color: #e3f2fd;
+    background-size: 30px 30px; /* */
+    color: black;
+}
+div:nth-of-type(3) {
+    background: radial-gradient(circle farthest-corner at 30px 20px, #bbdefb 10%, #2196f3 50%, #0d47a1 90%); /*[cite: 25] */
+}
+div:nth-of-type(4) {
+    background-color: #2196f3; /*[cite: 25] */
+    background-image: linear-gradient(to top, rgba(0,0,0,0.6), transparent); /*[cite: 25] */
+    background-repeat: no-repeat; /*[cite: 25] */
+    background-position: bottom; /*[cite: 25] */
+    background-size: 100% 50%; /*[cite: 25] */
+}

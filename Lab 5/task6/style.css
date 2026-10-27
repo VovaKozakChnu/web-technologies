@@ -1,0 +1,123 @@
+/* =========================================
+   ФОН СТОРІНКИ ТА ГОЛОВНИЙ КОНТЕЙНЕР
+   ========================================= */
+
+body {
+    background-color: #1b2a41; /* Запасний колір фону */
+    background-image: url('img/bg.jpg'); /* Велике фонове зображення */
+    background-repeat: no-repeat; /*[cite: 27] */
+    background-position: center; /*[cite: 27] */
+    background-size: cover; /*[cite: 27] */
+    background-attachment: fixed; /*[cite: 27] */
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    box-sizing: border-box; /*[cite: 27] */
+    max-width: 900px; /*[cite: 27] */
+    min-width: 320px; /*[cite: 27] */
+    margin: 0 auto;
+    padding: 20px; /*[cite: 27] */
+    background-color: rgba(255, 255, 255, 0.85); /* Напівпрозорий фон[cite: 27] */
+}
+/* КОМЕНТАР ДО КОНТЕЙНЕРА:
+   Коли вікно браузера стає вужчим за 320px, контейнер припиняє зменшуватися.
+   Він зберігає ширину 320px, а в браузері з'являється горизонтальна смуга прокручування.[cite: 27] */
+
+
+/* =========================================
+   БЛОК «ТЕГИ» (display)
+   ========================================= */
+
+.inline-div {
+    display: inline; /*[cite: 27] */
+    width: 200px; /*[cite: 27] */
+    height: 100px; /*[cite: 27] */
+    background-color: #ffcc80;
+    margin: 5px;
+    padding: 5px;
+}
+/* КОМЕНТАР ДО ТЕГІВ:
+   Властивості width та height не діють на .inline-div, оскільки елементи з display: inline
+   займають лише той простір, який необхідний для їхнього вмісту (тексту).[cite: 27] */
+
+.block-span {
+    display: block; /*[cite: 27] */
+    width: 150px; /*[cite: 27] */
+    background-color: #a5d6a7;
+    margin: 5px;
+    padding: 5px;
+}
+/* Елементи span розташуються стовпцем і їхня ширина буде рівно 150px[cite: 27] */
+
+
+/* =========================================
+   БЛОК «ПОВТОРЕННЯ ФОНУ» (background-repeat)
+   ========================================= */
+
+.rep {
+    height: 200px; /*[cite: 27] */
+    margin-bottom: 10px;
+    background-image: url('img/star.jpg'); /* Шлях до іконки зірки */
+    background-size: 60px 60px; /* РОБИМО ІКОНКУ МАЛЕНЬКОЮ ДЛЯ ДЕМОНСТРАЦІЇ */
+    background-color: #e0e0e0;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.repeat-x { background-repeat: repeat-x; } /*[cite: 27] */
+.repeat-y { background-repeat: repeat-y; } /*[cite: 27] */
+.space { background-repeat: space; } /*[cite: 27] */
+.round { background-repeat: round; } /*[cite: 27] */
+/* КОМЕНТАР МІЖ SPACE ТА ROUND:
+   - space: розподіляє картинки рівномірно з порожнім простором між ними, картинки ніколи не обрізаються.[cite: 11]
+   - round: масштабує (розтягує/стискає) картинки так, щоб у блок помістилася ціла кількість зображень без прогалин.[cite: 11] */
+
+
+/* =========================================
+   БЛОК «МАСШТАБУВАННЯ» (background-size)
+   ========================================= */
+
+.size {
+    width: 300px; /*[cite: 27] */
+    height: 200px; /*[cite: 27] */
+    border: 2px solid black; /*[cite: 27] */
+    margin: 10px;
+    display: inline-block;
+    background-image: url('img/pic.jpg'); /* Звичайна картинка (напр. футболіст) */
+    background-position: center; /*[cite: 27] */
+    background-repeat: no-repeat; /*[cite: 27] */
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black; /* Щоб текст було видно на картинці */
+}
+
+.contain { background-size: contain; } /*[cite: 27] */
+.cover { background-size: cover; } /*[cite: 27] */
+
+
+/* =========================================
+   БЛОК «ПРОКРУЧУВАННЯ ФОНУ» (background-attachment)
+   ========================================= */
+
+.attach {
+    width: 45%;
+    max-height: 150px; /*[cite: 28] */
+    overflow: auto; /*[cite: 28] */
+    display: inline-block;
+    vertical-align: top;
+    background-image: url('img/pic.jpg'); /* Та сама звичайна картинка */
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #333;
+}
+
+.attach.scroll { background-attachment: scroll; } /*[cite: 28] */
+.attach.local { background-attachment: local; } /*[cite: 28] */
+/* КОМЕНТАР ПРО ПОВЕДІНКУ ФОНУ:
+   - scroll: фон залишається нерухомим відносно меж блоку, коли користувач прокручує текст всередині.[cite: 12]
+   - local: фон фіксується відносно вмісту (тексту) і прокручується вгору або вниз разом із ним.[cite: 12] */

@@ -1,0 +1,18 @@
+/* 1. box-sizing */
+.box { width: 300px; padding: 20px; border: 5px solid #ff5722; display: inline-block; margin: 20px; background-color: #fbe9e7; vertical-align: top; } /*[cite: 26] */
+.content-box { box-sizing: content-box; } /* Загальна ширина: 300+40+10 = 350px[cite: 26] */
+.border-box { box-sizing: border-box; } /* Загальна ширина: 300px[cite: 26] */
+
+/* 2. overflow */
+.ov { width: 200px; max-height: 80px; border: 2px solid #4caf50; margin: 10px; display: inline-block; vertical-align: top; } /*[cite: 26] */
+.visible { overflow: visible; } /*[cite: 26] */
+.hidden { overflow: hidden; } /*[cite: 26] */
+.scroll { overflow: scroll; } /*[cite: 26] */
+.auto { overflow: auto; } /*[cite: 26] */
+
+/* 3. display */
+ul { list-style-type: none; padding: 0; } /*[cite: 26] */
+li { display: inline-block; } /*[cite: 26] */
+li a { display: block; padding: 10px 20px; background-color: #3f51b5; color: white; text-decoration: none; } /*[cite: 26] */
+.hidden-item { display: none; } /*[cite: 26] */
+/* Коментар: display: none повністю видаляє елемент з потоку документа, на відміну від visibility: hidden, який залишає порожнє місце.[cite: 26] */

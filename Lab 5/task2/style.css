@@ -1,0 +1,46 @@
+/* Базові налаштування таблиці */
+table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse; /* Прибираємо подвійні рамки */
+    font-family: Arial, sans-serif;
+    color: white; /* Білий текст для всієї таблиці */
+    text-align: center;
+}
+
+/* Налаштування клітинок та білих рамок */
+th, td {
+    padding: 15px;
+    border: 2px solid white; /* Біла сітка як на зразку */
+    font-size: 18px;
+}
+
+/* --- Стилізація шапки (перший рядок) від світлого до темного --- */
+/* 1 колонка */
+th:nth-child(1) { background-color: #f2d7d5; }
+/* 2 колонка */
+th:nth-child(2) { background-color: #e6b0aa; }
+/* 3 колонка */
+th:nth-child(3) { background-color: #cd6155; }
+/* 4 колонка */
+th:nth-child(4) { background-color: #a93226; }
+/* 5 колонка */
+th:nth-child(5) { background-color: #641e16; }
+
+/* --- Стилізація першої колонки у рядках з даними --- */
+td:first-child {
+    background-color: #c0392b; /* Фіксований темніший колір для назв */
+    font-weight: normal;
+}
+
+/* --- Чергування кольорів для клітинок з плюсами/мінусами --- */
+/* Парні рядки (окрім першої колонки) */
+tr:nth-child(even) td:not(:first-child) {
+    background-color: #e6b0aa;
+}
+
+/* Непарні рядки (окрім першої колонки) */
+tr:nth-child(odd) td:not(:first-child) {
+    background-color: #f2d7d5;
+}
