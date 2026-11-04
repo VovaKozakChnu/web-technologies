@@ -1,0 +1,178 @@
+/* Базові налаштування */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+/* Багаторівневі марковані списки без базових відступів і маркерів[cite: 72] */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Очищення float для горизонтального списку */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* =========================================
+   ВЕРТИКАЛЬНА ПАНЕЛЬ НАВІГАЦІЇ
+   ========================================= */
+.vertical-nav {
+    position: fixed; /* фіксація панелі[cite: 73] */
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh; /* повна висота вертикальної навігації[cite: 73] */
+    background-color: #0078D7; /* колір з макета[cite: 73] */
+    color: white;
+    z-index: 1000;
+}
+
+.vertical-nav > ul > li {
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.vertical-nav a {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* відступ між піктограмою та текстом */
+    transition: background-color 0.3s;
+}
+
+/* Відображення активного (поточного) пункту меню[cite: 73] */
+.vertical-nav li.active > a {
+    background-color: #005a9e;
+    font-weight: bold;
+    border-left: 4px solid #fff;
+}
+
+/* Зміна вигляду при наведенні[cite: 73] */
+.vertical-nav a:hover {
+    background-color: #005a9e;
+}
+
+/* Випадне меню (2-й рівень)[cite: 72] */
+.vertical-nav .submenu {
+    position: absolute; /* позиціонування випадного меню[cite: 72, 73] */
+    top: 0;
+    left: 100%; /* відкривається праворуч */
+    width: 200px;
+    background-color: #005a9e;
+    display: none; /* приховано за замовчуванням */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Показуємо при наведенні на li[cite: 73] */
+.vertical-nav li:hover > .submenu {
+    display: block;
+}
+
+/* Третій рівень вкладеності[cite: 73] */
+.vertical-nav .submenu li {
+    position: relative;
+}
+
+.vertical-nav .submenu-3 {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200px;
+    background-color: #004578;
+    display: none;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.vertical-nav .submenu li:hover > .submenu-3 {
+    display: block;
+}
+
+/* =========================================
+   ГОРИЗОНТАЛЬНА ПАНЕЛЬ НАВІГАЦІЇ
+   ========================================= */
+.content-wrapper {
+    margin-left: 250px; /* зсув контенту, щоб його не перекривало вертикальне меню */
+}
+
+.horizontal-nav {
+    position: sticky; /* створення (sticky) «липкої» навігаційної панелі[cite: 73] */
+    top: 0;
+    background-color: #333;
+    color: white;
+    z-index: 500;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.horizontal-nav > ul > li {
+    float: left; /* пункти шикуються в рядок через float */
+    position: relative;
+}
+
+/* Вирівнювання останнього пункту меню справа через float[cite: 73] */
+.horizontal-nav > ul > li.float-right {
+    float: right;
+}
+
+.horizontal-nav a {
+    padding: 15px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.horizontal-nav li.active > a {
+    background-color: #555;
+    border-bottom: 3px solid #0078D7;
+}
+
+.horizontal-nav a:hover {
+    background-color: #555;
+}
+
+/* Випадне меню 2-го рівня для горизонтальної навігації */
+.horizontal-nav .dropdown {
+    position: absolute;
+    top: 100%; /* випадає вниз під меню */
+    left: 0;
+    width: 200px;
+    background-color: #444;
+    display: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Для пункту, що вирівняний справа, меню має випадати ліворуч, щоб не вилазити за екран */
+.horizontal-nav .float-right .dropdown {
+    left: auto;
+    right: 0;
+}
+
+.horizontal-nav li:hover > .dropdown {
+    display: block;
+}
+
+.horizontal-nav .dropdown a {
+    padding: 12px 20px;
+    justify-content: flex-start;
+}
+
+.horizontal-nav .dropdown a:hover {
+    background-color: #555;
+}
+
+/* Відступи для тексту */
+.main-content {
+    padding: 40px;
+}

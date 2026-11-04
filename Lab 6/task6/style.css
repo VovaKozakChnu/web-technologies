@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+/* Шапка сайту */
+.top-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    gap: 20px;
+}
+
+.nav-text {
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.nav-text:hover { text-decoration: underline; }
+
+/* Контейнер попапу */
+.popup-container {
+    position: relative;
+}
+
+/*
+ * Ховаємо чекбокси так, щоб вони залишалися фокусованими (Tab-доступними)
+ * Не можна використовувати display: none![cite: 76]
+ */
+.visually-hidden {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* Кнопка відкриття (іконка сітки) */
+.popup-button {
+    cursor: pointer;
+    display: flex;
+    padding: 8px;
+    border-radius: 50%;
+    color: #5f6368;
+    transition: background-color 0.2s;
+}
+
+.popup-button:hover { background-color: #f1f3f4; }
+
+/* Стан Focus для клавіатури: підсвічуємо label, коли checkbox у фокусі[cite: 76] */
+.visually-hidden:focus + .popup-button {
+    outline: 2px solid #4285f4;
+    background-color: #e8f0fe;
+}
+
+/* =========================================
+   СТАНИ ПОПАПУ
+   ========================================= */
+.popup-window {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 320px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+
+    /* За замовчуванням прихований (елементи всередині не отримують focus)[cite: 76] */
+    display: none;
+    z-index: 1000;
+}
+
+/* Коли головний чекбокс натиснуто — показуємо попап[cite: 75, 76] */
+#popup-toggle:checked ~ .popup-window {
+    display: block;
+}
+
+/* Зона, що прокручується[cite: 76] */
+.popup-scroll-area {
+    max-height: 400px; /* Максимальна висота */
+    overflow-y: auto;  /* Прокрутка з'явиться тільки тоді, коли контент не влазитиме */
+    overflow-x: hidden;
+    border-radius: 8px;
+}
+
+/* Фокус на самому контейнері, щоб крутити стрілками клавіатури[cite: 76] */
+.popup-scroll-area:focus {
+    outline: 2px solid #4285f4;
+}
+
+/* Сітка іконок */
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 15px;
+    gap: 15px;
+}
+
+/* Стиль кожної іконки (інтерактивний елемент)[cite: 75, 76] */
+.app-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.app-item:hover {
+    border-color: #d2e3fc;
+    background-color: #f8fbff;
+}
+
+.app-item:focus {
+    outline: 2px solid #4285f4;
+    background-color: #f8fbff;
+}
+
+.app-item .material-icons {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.app-name {
+    font-size: 13px;
+}
+
+/* =========================================
+   КНОПКА "MORE" ТА РОЗШИРЕННЯ
+   ========================================= */
+.more-button {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    background-color: #f5f5f5;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    border-top: 1px solid #ebebeb;
+    transition: background-color 0.2s;
+}
+
+.more-button:hover { background-color: #e0e0e0; }
+
+.visually-hidden:focus + .more-button {
+    outline: 2px solid #4285f4;
+    background-color: #e8f0fe;
+}
+
+/* Приховуємо додаткові додатки за замовчуванням */
+.extra-apps {
+    display: none;
+}
+
+/* Розділювач між основними та додатковими */
+.divider {
+    border: 0;
+    height: 1px;
+    background-color: #ebebeb;
+    margin: 0;
+}
+
+/* Якщо чекбокс More натиснуто: показуємо extra-apps та ховаємо саму кнопку More */
+#more-toggle:checked ~ .extra-apps {
+    display: block; /* Контент збільшується, з'являється scroll */
+}
+
+#more-toggle:checked + .more-button {
+    display: none;
+}

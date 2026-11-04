@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 50px;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    gap: 15px; /* Відстань між лівою та правою колонкою */
+    align-items: flex-start;
+}
+
+.col {
+    display: flex;
+    gap: 10px; /* Відстань між верхнім та нижнім блоком */
+}
+
+/* Ліва колонка йде звичайним порядком (зверху вниз) */
+.left-col {
+    flex-direction: column;
+}
+
+/* Права колонка перевернута (знизу вгору), щоб візуально ціль була над тригером */
+.right-col {
+    flex-direction: column-reverse;
+}
+
+/* Загальні стилі для блоків, на які наводимо мишку (зелені) */
+.trigger {
+    background-color: #00b050; /* Зелений колір як у завданні */
+    color: black;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Загальні стилі для блоків, які з'являються (сині) */
+.target {
+    background-color: #5a8ecd; /* Синій колір */
+    color: white;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* Приховуємо блок, але зберігаємо його місце на сторінці[cite: 21, 22] */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Індивідуальні розміри для лівої колонки */
+.block-1-1 {
+    width: 160px;
+    height: 50px;
+}
+.block-2-1 {
+    width: 160px;
+    height: 160px;
+}
+
+/* Індивідуальні розміри для правої колонки (вона ширша) */
+.block-1-2 {
+    width: 280px;
+    height: 50px;
+}
+.block-2-2 {
+    width: 280px;
+    height: 160px;
+}
+
+/*
+ * Магія CSS: при наведенні на .trigger,
+ * наступний за ним у коді .target стає видимим[cite: 22]
+ */
+.trigger:hover + .target {
+    opacity: 1;
+    visibility: visible;
+}

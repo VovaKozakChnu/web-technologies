@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 4 - Навігаційні панелі</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Підключення піктограм Google Fonts Icons[cite: 73] -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ВЕРТИКАЛЬНА ПАНЕЛЬ[cite: 73] -->
+    <nav class="vertical-nav">
+        <ul>
+            <!-- Відображення активного (поточного) пункту меню[cite: 73] -->
+            <li class="active">
+                <a href="#"><span class="material-icons">home</span> Home</a>
+            </li>
+            <li>
+                <!-- Перший рівень: піктограма + назва пункту[cite: 73] -->
+                <a href="#"><span class="material-icons">info</span> About</a>
+                <!-- Випадне меню (2-й рівень)[cite: 72] -->
+                <ul class="submenu">
+                    <li><a href="#">Our Team</a></li>
+                    <li>
+                        <a href="#">History &raquo;</a>
+                        <!-- Три рівні вкладеності[cite: 73] -->
+                        <ul class="submenu-3">
+                            <li><a href="#">2010s</a></li>
+                            <li><a href="#">2020s</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="material-icons">work</span> Services</a>
+                <ul class="submenu">
+                    <li><a href="#">Web Dev</a></li>
+                    <li><a href="#">Design</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="material-icons">coffee</span> Work With Me</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- ОСНОВНИЙ КОНТЕНТ (відступає вправо, щоб не перекривати вертикальне меню) -->
+    <div class="content-wrapper">
+
+        <!-- ГОРИЗОНТАЛЬНА ПАНЕЛЬ[cite: 73] -->
+        <nav class="horizontal-nav">
+            <!-- clearfix для роботи з float[cite: 73] -->
+            <ul class="clearfix">
+                <!-- Перший рівень представлений піктограмами[cite: 73] -->
+                <li>
+                    <a href="#" class="active" title="Головна"><span class="material-icons">home</span></a>
+                </li>
+                <li>
+                    <a href="#" title="Повідомлення"><span class="material-icons">email</span></a>
+                    <!-- Випадне меню[cite: 72] -->
+                    <ul class="dropdown">
+                        <li><a href="#">Вхідні</a></li>
+                        <li><a href="#">Відправлені</a></li>
+                    </ul>
+                </li>
+                <!-- Останній пункт меню справа через float[cite: 73] -->
+                <li class="float-right">
+                    <a href="#" title="Профіль"><span class="material-icons">account_circle</span></a>
+                    <ul class="dropdown">
+                        <li><a href="#">Налаштування</a></li>
+                        <li><a href="#">Вихід</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <h1>Контент сторінки</h1>
+            <p>Прокрутіть сторінку вниз, щоб побачити як працює «липка» (sticky) горизонтальна панель навігації.</p>
+            <!-- Блок для імітації довгої сторінки та скролінгу -->
+            <div style="height: 1500px; background: linear-gradient(#e2e2e2, #a0a0a0); margin-top: 20px; border-radius: 10px;"></div>
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 6 - Попап без JS</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Підключення іконок Google Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <header class="top-header">
+        <span class="nav-text">Mail</span>
+        <span class="nav-text">Images</span>
+
+        <!-- Контейнер для попапу -->
+        <div class="popup-container">
+
+            <!-- 1. Прихований чекбокс для відкриття попапу -->
+            <input type="checkbox" id="popup-toggle" class="visually-hidden">
+            <!-- Label працює як кнопка (при кліку змінює стан чекбокса) -->
+            <label for="popup-toggle" class="popup-button" title="Google apps">
+                <span class="material-icons">apps</span>
+            </label>
+
+            <!-- Саме вікно попапу -->
+            <div class="popup-window">
+
+                <!-- Контейнер, який стає scrollable (отримує фокус для скролу клавіатурою) -->
+                <div class="popup-scroll-area" tabindex="0">
+
+                    <!-- Основна сітка іконок -->
+                    <div class="apps-grid">
+                        <a href="#" class="app-item"><span class="material-icons" style="color: #4285F4;">calendar_today</span><span class="app-name">Calendar</span></a>
+                        <a href="#" class="app-item"><span class="material-icons" style="color: #EA4335;">mail</span><span class="app-name">Mail</span></a>
+                        <a href="#" class="app-item"><span class="material-icons" style="color: #34A853;">article</span><span class="app-name">News</span></a>
+                        <a href="#" class="app-item"><span class="material-icons" style="color: #FBBC05;">place</span><span class="app-name">Map</span></a>
+                        <a href="#" class="app-item"><span class="material-icons" style="color: #F4B400;">folder</span><span class="app-name">Files</span></a>
+                        <a href="#" class="app-item"><span class="material-icons" style="color: #34A853;">contacts</span><span class="app-name">Contacts</span></a>
+                    </div>
+
+                    <!-- 2. Прихований чекбокс для кнопки "More" -->
+                    <input type="checkbox" id="more-toggle" class="visually-hidden">
+                    <label for="more-toggle" class="more-button">More</label>
+
+                    <!-- Блок із додатковими іконками (розширений стан)[cite: 75] -->
+                    <div class="extra-apps">
+                        <hr class="divider">
+                        <div class="apps-grid">
+                            <a href="#" class="app-item"><span class="material-icons" style="color: #555;">translate</span><span class="app-name">Translate</span></a>
+                            <a href="#" class="app-item"><span class="material-icons" style="color: #EA4335;">play_circle</span><span class="app-name">Videos</span></a>
+                            <a href="#" class="app-item"><span class="material-icons" style="color: #4285F4;">search</span><span class="app-name">Search</span></a>
+                            <a href="#" class="app-item"><span class="material-icons" style="color: #F4B400;">photo</span><span class="app-name">Photos</span></a>
+                            <a href="#" class="app-item"><span class="material-icons" style="color: #34A853;">android</span><span class="app-name">Apps</span></a>
+                            <a href="#" class="app-item"><span class="material-icons" style="color: #4285F4;">description</span><span class="app-name">Documents</span></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+</body>
+</html>
