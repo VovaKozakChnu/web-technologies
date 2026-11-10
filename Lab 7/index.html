@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Widget</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="weather-widget">
+    <!-- Верхня частина: Поточна погода -->
+    <div class="current-weather">
+        <h1>New York, NY</h1>
+        <p class="subtitle">Tuesday, April 15th</p>
+        <p class="subtitle">Overcast</p>
+
+        <div class="main-weather-info">
+            <img src="icons/cloudy.jpg" alt="Overcast" class="main-icon">
+
+            <div class="main-temp">
+                <span class="temp-value">58</span>
+                <span class="temp-unit">&deg;F</span>
+            </div>
+
+            <div class="details">
+                <p>Precipitation: 100%</p>
+                <p>Humidity: 97%</p>
+                <p>Wind: 4 mph SW</p>
+                <p>Pollen Count: 36</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Нижня частина: Повний прогноз на тиждень -->
+    <div class="forecast-list">
+
+        <div class="forecast-item">
+            <span class="day">Today</span>
+            <img src="icons/rain.jpg" alt="Rain" class="weather-icon">
+            <div class="temps">
+                <span class="temp-high">68&deg;</span>
+                <span class="temp-low">36&deg;</span>
+            </div>
+            <span class="pollen">Pollen 36</span>
+        </div>
+
+        <div class="forecast-item">
+            <span class="day">Wednesday</span>
+            <img src="icons/sunny.png" alt="Sunny" class="weather-icon">
+            <div class="temps">
+                <span class="temp-high">50&deg;</span>
+                <span class="temp-low">39&deg;</span>
+            </div>
+            <span class="pollen">Pollen 36</span>
+        </div>
+
+        <div class="forecast-item">
+            <span class="day">Thursday</span>
+            <img src="icons/sunny.png" alt="Sunny" class="weather-icon">
+            <div class="temps">
+                <span class="temp-high">55&deg;</span>
+                <span class="temp-low">39&deg;</span>
+            </div>
+            <span class="pollen">Pollen 36</span>
+        </div>
+
+        <div class="forecast-item">
+            <span class="day">Friday</span>
+            <img src="icons/partly-cloudy.png" alt="Partly Cloudy" class="weather-icon">
+            <div class="temps">
+                <span class="temp-high">54&deg;</span>
+                <span class="temp-low">43&deg;</span>
+            </div>
+            <span class="pollen">Pollen 36</span>
+        </div>
+
+        <div class="forecast-item">
+            <span class="day">Saturday</span>
+            <img src="icons/rain.jpg" alt="Rain" class="weather-icon">
+            <div class="temps">
+                <span class="temp-high">64&deg;</span>
+                <span class="temp-low">46&deg;</span>
+            </div>
+            <span class="pollen">Pollen 36</span>
+        </div>
+
+        <div class="forecast-item">
+            <span class="day">Sunday</span>
+            <img src="icons/rain.jpg" alt="Rain" class="weather-icon">
+            <div class="temps">
+                <span class="temp-high">64&deg;</span>
+                <span class="temp-low">50&deg;</span>
+            </div>
+            <span class="pollen">Pollen 36</span>
+        </div>
+
+        <div class="forecast-item">
+            <span class="day">Monday</span>
+            <img src="icons/partly-cloudy.png" alt="Partly Cloudy" class="weather-icon">
+            <div class="temps">
+                <span class="temp-high">61&deg;</span>
+                <span class="temp-low">50&deg;</span>
+            </div>
+            <span class="pollen">Pollen 36</span>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
