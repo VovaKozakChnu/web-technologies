@@ -1,0 +1,66 @@
+:root {
+    --border-color: #d9534f;
+    --bg-color: #fff9f9;
+    --gap: 12px;
+}
+
+body {
+    background-color: var(--bg-color);
+    padding: var(--gap);
+}
+
+/* Mobile-first */
+.layout {
+    display: grid;
+    gap: var(--gap);
+    min-height: calc(100vh - 24px);
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto auto auto;
+    grid-template-areas:
+        "header"
+        "navigation"
+        "main"
+        "sidebar"
+        "ads"
+        "footer";
+}
+
+.box {
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    padding: 12px;
+    background-color: #ffffff;
+}
+
+.header     { grid-area: header; }
+.navigation { grid-area: navigation; }
+.main       { grid-area: main; }
+.sidebar    { grid-area: sidebar; }
+.ads        { grid-area: ads; }
+.footer     { grid-area: footer; }
+
+/* Tablet (від 768px) */
+@media (min-width: 768px) {
+    .layout {
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "header header"
+            "navigation navigation"
+            "sidebar main"
+            "ads footer";
+    }
+}
+
+/* Desktop (від 1024px) */
+@media (min-width: 1024px) {
+    .layout {
+        grid-template-columns: 200px 1fr 200px;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "header header header"
+            "sidebar navigation ads"
+            "sidebar main ads"
+            "footer footer footer";
+    }
+}

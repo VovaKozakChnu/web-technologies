@@ -129,7 +129,7 @@ body {
 /* Вертикальне розташування двох температур (High та Low) */
 .forecast-item .temps {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     flex-basis: 20%;
     gap: 2px;
